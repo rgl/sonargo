@@ -12,6 +12,7 @@ type UserTokensGenerateObject struct {
 	Login     string `json:"login,omitempty"`
 	Name      string `json:"name,omitempty"`
 	Token     string `json:"token,omitempty"`
+	Type      string `json:"type,omitempty"`
 }
 
 type UserTokensSearchObject struct {
@@ -20,8 +21,12 @@ type UserTokensSearchObject struct {
 }
 
 type UserToken struct {
-	CreatedAt string `json:"createdAt,omitempty"`
-	Name      string `json:"name,omitempty"`
+	Name               string `json:"name,omitempty"`
+	CreatedAt          string `json:"createdAt,omitempty"`
+	LastConnectionDate string `json:"lastConnectionDate,omitempty"`
+	Type               string `json:"type,omitempty"`
+	ExpirationDate     string `json:"expirationDate,omitempty"`
+	IsExpired          bool   `json:"isExpired,omitempty"`
 }
 
 type UserTokensGenerateOption struct {
