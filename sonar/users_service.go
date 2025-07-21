@@ -25,6 +25,7 @@ type User struct {
 	Groups             []string `json:"groups,omitempty"`
 	Avatar             string   `json:"avatar,omitempty"`
 	LastConnectionDate string   `json:"lastConnectionDate,omitempty"`
+	Managed            bool     `json:"managed,omitempty"`
 }
 
 type UsersChangePasswordOption struct {
